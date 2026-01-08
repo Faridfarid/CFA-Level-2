@@ -27,8 +27,8 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({ onSelect, isLoading }) =>
             <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors">
               {topic}
             </h3>
-            <p className="mt-4 text-gray-500 text-sm">
-              Practice specialized vignettes designed for the Level 2 curriculum.
+            <p className="mt-4 text-gray-500 text-sm leading-relaxed">
+              Practice specialized vignettes designed for the Level 2 curriculum with interactive exhibits.
             </p>
           </div>
         </button>

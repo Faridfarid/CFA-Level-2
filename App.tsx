@@ -7,6 +7,8 @@ import { generateVignette } from './services/geminiService';
 import TopicSelector from './components/TopicSelector';
 import QuestionCard from './components/QuestionCard';
 
+const clean = (text: string) => text.replace(/\*\*/g, '');
+
 const App: React.FC = () => {
   const [session, setSession] = useState<QuizSession | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -122,7 +124,7 @@ const App: React.FC = () => {
               <div className="p-8">
                 <div className="mb-6">
                   <h2 className="text-3xl font-black text-gray-900 mb-2 leading-tight">
-                    {session.vignette.title}
+                    {clean(session.vignette.title)}
                   </h2>
                   <div className="flex gap-2">
                     <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold uppercase rounded">Vignette</span>
